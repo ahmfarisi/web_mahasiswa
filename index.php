@@ -31,28 +31,31 @@
                 <th>Program Studi</th>
                 <th>Aksi</th>
             </tr>
-            <tr>
-            <td>1</td>
-            <td>123456789</td>
-            <td>Ahmad Farisi</td>
-            <td>LK</td>
-            <td>Manajemen Informatika</td>
-                <td>
-                    <a href="ubah.php" type="button" class="btn btn-primary btn-sm">Ubah</a>
-                    <a href="proses-hapus.php" type="button" class="btn btn-primary btn-sm">Hapus</a>
-                </td> 
-            </tr>
-            <tr>
-            <td>2</td>
-            <td>987654321</td>
-            <td>Nabila Yasmin</td>
-            <td>PR</td>
-            <td>Sistem Informasi</td>
-            <td>
-                    <a href="ubah.php" type="button" class="btn btn-primary btn-sm">Ubah</a>
-                    <a href="proses-hapus.php" type="button" class="btn btn-primary btn-sm">Hapus</a>
-                </td> 
-            </tr>
+
+            <?php
+            include("koneksi.php");
+            $perintah = "SELECT * FROM tblmhs";
+            $eksekusi = mysqli_query($konek, $perintah);
+            $i = 1;
+
+            while($ambil = mysqli_fetch_array($eksekusi)){
+                ?>
+                <tr>
+                    <td><?php echo $i; ?></td>
+                    <td><?php echo $ambil["npm"]; ?></td>
+                    <td><?php echo $ambil["nama"]; ?></td>
+                    <td><?php echo $ambil["jns_kel"]; ?></td>
+                    <td><?php echo $ambil["prodi"]; ?></td>
+                    <td>
+                        <a href="ubah.php?kirim=<?php echo $ambil["npm"]; ?>" type="button" class="btn btn-primary btn-sm">Ubah</a>
+                        <a href="proses-hapus.php?kirim=<?php echo $ambil["npm"]; ?>" type="button" class="btn btn-primary btn-sm">Hapus</a>
+                    </td> 
+                </tr>
+                <?php
+                $i++;
+            }
+            ?>
+            
         </table>
 
     </div>
