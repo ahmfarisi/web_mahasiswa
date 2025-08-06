@@ -18,10 +18,14 @@
             <h1>Kampus Inovasi</h1>
         </div>    
 
+        <p class="h3 mt-2">Daftar Mahasiswa</p>
+
+        <a href="tambah.php" type="button" class="btn btn-primary">Tambah</a>
+
     </div>
 
     <hr>
-    <h3>Daftar Mahasiswa</h3>
+    
     <a href="tambah.php">Tambah</a>
     <br><br>
     <table border="1">
