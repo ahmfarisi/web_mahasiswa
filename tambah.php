@@ -20,23 +20,46 @@
 
         <p class="h3 mt-2">Tambah Data Mahasiswa</p>
 
-        <a href="index.php" type="button" class="btn btn-primary">Kembali</a>
+        <a href="index.php" type="button" class="btn btn-dark">Kembali</a>
 
         <form action="proses-tambah.php" method="POST">
+
             <div class="mb-3 mt-3">
                 <label for="npm" class="form-label">NPM:</label>
                 <input type="text" class="form-control" id="npm" placeholder="Nomor Pengenal Mahasiswa" name="npm">
             </div>
+
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama:</label>
                 <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" name="nama">
             </div>
-            <div class="form-check mb-3">
-                <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                </label>
+
+            <div class="mb-3">
+                <label for="jns_kel" class="form-label">Jenis Kelamin:</label>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="LK" name="jns_kel" value="LK" checked>Laki-Laki
+                    <label class="form-check-label" for="LK"></label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="PR" name="jns_kel" value="PR">Perempuan
+                    <label class="form-check-label" for="PR"></label>
+                </div>                
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="mb-3">
+                <label for="prodi" class="form-label">Program Studi:</label>
+                <select class="form-select" name="prodi">
+                    <option value="Manajemen Informatika">Manajemen Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Informatika">Informatika</option>
+                    <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                    <option value="Magister Sistem Informasi">Magister Sistem Informasi</option>
+                </select>                
+            </div>
+
+            <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
 
     </div>
