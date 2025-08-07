@@ -22,23 +22,32 @@
 
         <a href="index.php" type="button" class="btn btn-dark">Kembali</a>
 
+        <?php
+        $t_npm = $_GET["kirim"];
+
+        include("koneksi.php");
+        $perintah = "SELECT * FROM tblmhs WHERE npm='$t_npm'";
+        $eksekusi = mysqli_query($konek, $perintah);
+        $ambil = mysqli_fetch_array($eksekusi)
+        ?>
+
         <form action="proses-ubah.php" method="POST">
 
             <div class="mb-3 mt-3">
                 <label for="npm" class="form-label">NPM:</label>
-                <input type="text" class="form-control" id="npm" placeholder="Nomor Pengenal Mahasiswa" name="npm">
+                <input type="text" value="<?php echo $ambil["npm"]; ?>" class="form-control" id="npm" placeholder="Nomor Pengenal Mahasiswa" name="npm">
             </div>
 
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama:</label>
-                <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" name="nama">
+                <input type="text" value="<?php echo $ambil["nama"]; ?>" class="form-control" id="nama" placeholder="Nama Lengkap" name="nama">
             </div>
 
             <div class="mb-3">
                 <label for="jns_kel" class="form-label">Jenis Kelamin:</label>
 
                 <div class="form-check">
-                    <input type="radio" class="form-check-input" id="LK" name="jns_kel" value="LK" checked>Laki-Laki
+                    <input type="radio" class="form-check-input" id="LK" name="jns_kel" value="LK">Laki-Laki
                     <label class="form-check-label" for="LK"></label>
                 </div>
 
