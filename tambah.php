@@ -54,8 +54,6 @@
                     <option value="Manajemen Informatika">Manajemen Informatika</option>
                     <option value="Sistem Informasi">Sistem Informasi</option>
                     <option value="Informatika">Informatika</option>
-                    <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-                    <option value="Magister Sistem Informasi">Magister Sistem Informasi</option>
                 </select>                
             </div>
 
