@@ -26,12 +26,12 @@
 
             <div class="mb-3 mt-3">
                 <label for="npm" class="form-label">NPM:</label>
-                <input type="text" class="form-control" id="npm" placeholder="Nomor Pengenal Mahasiswa" name="npm">
+                <input type="text" class="form-control" id="npm" placeholder="Nomor Pengenal Mahasiswa" name="npm" required>
             </div>
 
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama:</label>
-                <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" name="nama">
+                <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" name="nama" required>
             </div>
 
             <div class="mb-3">
